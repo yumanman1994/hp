@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
-    <title>Hello Cherry!</title>
-    <style type="text/css">
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+        <title>Hello 新新!</title>
+        <style type="text/css">
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
     margin:0;
     padding:0;
@@ -96,7 +96,7 @@ body {
     </style>
 </head>
 <body>
-    <div id="loading">Hello Cherry...</div>
+    <div id="loading">Hello 新新...</div>
     <div id="theEnd"></div>
     <div id="map"></div>
 
@@ -116,20 +116,22 @@ body {
 <script type="text/javascript">
 
 
-// 初始化地图中心
+// 初始化地图中心  112.366216,24.527617
 var MP_CEN = {lng: 113.960449,lat:22.545565};
 // 中国中心
 var CN_CEN = {lng: 103.758427, lat: 36.172333};
 //120.549536,30.441076
 // B详细经纬度
-var MZ_JYU = {lng: 113.382679, lat:23.107305};
+// 116.811175,39.950232
+var MZ_JYU = {lng: 116.811175, lat:39.950232};
+
 // A详细经纬度
 var GZ_GTC = {lng: 113.960449,lat:22.545565};
-// 城市A中心
-var GD_GZS = {lng:114.059953, lat: 22.549257};
-// 城市B中心
+// 城市A中心 114.061677,22.550325
 
-var GD_HYS = {lng:113.270854, lat:23.136931};
+var GD_GZS = {lng:114.061677,lat:22.550325};
+// 城市B中心 // 117.077361,39.994495
+var GD_HYS = {lng:117.077361, lat:39.994495};
 // 背景音乐
 var MUSIC;
 
@@ -197,7 +199,7 @@ function panZoom_GTC() {
             map.addOverlay(marker);
             marker.setAnimation(BMAP_ANIMATION_BOUNCE);
             setTimeout(panZoom_JYU, 1000);
-        }, GZ_GTC);
+        }, new BMap.Point(GZ_GTC.lng, GZ_GTC.lat));
     }, 800);
 }
 
@@ -216,7 +218,7 @@ function panZoom_JYU() {
 }
 
 function panZoom_HEY() {
-    zoomTo(9, 1000, function() {
+    zoomTo(5, 1000, function() {
         map.panTo(new BMap.Point(GD_HYS.lng, GD_HYS.lat));
         setTimeout(function() {
             var start = new BMap.Point(MZ_JYU.lng, MZ_JYU.lat);
@@ -226,13 +228,13 @@ function panZoom_HEY() {
             setTimeout(function() {
                 var between = [
                     {
-                        title: '广州 → 深圳',
-                        content: '137.9 km.',
+                        title: '三河市 → 深圳',
+                        content: '2160.5 km.',
                         point: MZ_JYU
                     },
                     {
-                        title: '深圳 → 广州',
-                        content: '0.5 hours by train.',
+                        title: '深圳 → 三河市',
+                        content: '0.5 hours by plane.',
                         point: GZ_GTC
                     },
                     {
@@ -285,10 +287,10 @@ function wannaTo() {
                     point: {lng: 106.586502, lat: 29.56456}
                 },
                 {
-                    title: '澳门',
-                    content: '<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541930605601&di=4e033ae038f922fa40fafc9c83f83253&imgtype=0&src=http%3A%2F%2Fupload-images.jianshu.io%2Fupload_images%2F14328151-1be2b46925449ff2.jpeg" width="499" height="399" alt="wannaTo" />',
-                    // 113.55497,22.193031
-                    point: {lng: 113.55497, lat: 22.193031}
+                    title: '云南大理',
+                    content: '<img src="https://upload-images.jianshu.io/upload_images/7567582-ec52819ca205a3bb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/880/format/webp" width="499" height="399" alt="wannaTo" />',
+                    // 100.270442,25.600472
+                    point: {lng:100.270442, lat:25.600472}
                 },
                 {
                     title: '西藏',
@@ -347,7 +349,7 @@ function showMarkerText() {
             loopAddMarker(markerText, function() {
                 setTimeout(function() {
                     slideDown('theEnd', 1000, function() {
-                        var theEndText = '<div id="theEndText">这世上唯有梦想和好姑娘不可辜负！但我希望是你！我喜欢你！Cherry </div>' ;
+                        var theEndText = '<div id="theEndText">这世上唯有梦想和好姑娘不可辜负！但我希望是你！我喜欢你！新新 ！如果你勇敢我也会奋不顾身！！！</div>' ;
                         document.getElementById('theEnd').innerHTML = theEndText;
                     });
                 }, 5000);
