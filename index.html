@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
         <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
-        <title>Hello 新新!</title>
+        <title>Hello xx!</title>
         <style type="text/css">
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
     margin:0;
@@ -96,7 +96,7 @@ body {
     </style>
 </head>
 <body>
-    <div id="loading">Hello 新新...</div>
+    <div id="loading">Hello xx...</div>
     <div id="theEnd"></div>
     <div id="map"></div>
 
@@ -123,15 +123,15 @@ var CN_CEN = {lng: 103.758427, lat: 36.172333};
 //120.549536,30.441076
 // B详细经纬度
 // 116.811175,39.950232
-var MZ_JYU = {lng: 116.811175, lat:39.950232};
-
+// 116.764179,23.378478
+var MZ_JYU = {lng: 116.764179, lat:23.378478};
 // A详细经纬度
 var GZ_GTC = {lng: 113.960449,lat:22.545565};
 // 城市A中心 114.061677,22.550325
-
 var GD_GZS = {lng:114.061677,lat:22.550325};
 // 城市B中心 // 117.077361,39.994495
-var GD_HYS = {lng:117.077361, lat:39.994495};
+// 116.68278,23.365726
+var GD_HYS = {lng:116.682781, lat:23.365726};
 // 背景音乐
 var MUSIC;
 
@@ -218,7 +218,7 @@ function panZoom_JYU() {
 }
 
 function panZoom_HEY() {
-    zoomTo(5, 1000, function() {
+    zoomTo(9, 1000, function() {
         map.panTo(new BMap.Point(GD_HYS.lng, GD_HYS.lat));
         setTimeout(function() {
             var start = new BMap.Point(MZ_JYU.lng, MZ_JYU.lat);
@@ -228,13 +228,13 @@ function panZoom_HEY() {
             setTimeout(function() {
                 var between = [
                     {
-                        title: '三河市 → 深圳',
-                        content: '2160.5 km.',
+                        title: '汕头 → 深圳',
+                        content: '333 km.',
                         point: MZ_JYU
                     },
                     {
-                        title: '深圳 → 三河市',
-                        content: '4 hours by plane.',
+                        title: '深圳 → 汕头',
+                        content: '3 hours by train.',
                         point: GZ_GTC
                     },
                     {
@@ -349,7 +349,7 @@ function showMarkerText() {
             loopAddMarker(markerText, function() {
                 setTimeout(function() {
                     slideDown('theEnd', 1000, function() {
-                        var theEndText = '<div id="theEndText">这世上唯有梦想和好姑娘不可辜负！但我希望是你！我喜欢你！新新 ！如果你勇敢我也会奋不顾身！！！</div>' ;
+                        var theEndText = '<div id="theEndText">这世上唯有梦想和好姑娘不可辜负！但我希望是你！我喜欢你！xx ！如果你勇敢我也会奋不顾身！！！</div>' ;
                         document.getElementById('theEnd').innerHTML = theEndText;
                     });
                 }, 5000);
